@@ -1,0 +1,22 @@
+//a console game where the computer generates a random number between 1 and 100 and the user has to guess it.
+//The computer should give hints (higher or lower) until the user guesses the correct number
+
+//import kotlin.random
+
+    fun main() {
+        println("Guess a number between 1 and 100:")
+
+        val randomNumber = (1..100).random()
+        var guess = 0
+
+        while (guess != randomNumber) {
+            guess = readLine()?.toIntOrNull() ?: 0
+            if (guess < randomNumber) {
+                println("Your guess is too low, try again!")
+            } else if (guess > randomNumber) {
+
+                println("Your guess is too high, try again!")
+            }
+        }
+        println("You guessed the number! Congratulations! you're a genius")
+    }
