@@ -1,0 +1,15 @@
+//a program that prints the Fibonacci sequence up to a given number
+
+fun main() {
+    print(" Please Enter the number till which Fibonacci series is to be printed: ")
+    val num = readLine()!!.toIntOrNull() ?: return
+    println("Fibonacci series up to $num are :")
+    var num1 = 0
+    var num2 = 1
+    while (num1 <= num) {
+        println("$num1")
+        val sum = num1 + num2
+        num1 = num2
+        num2 = sum
+    }
+}
