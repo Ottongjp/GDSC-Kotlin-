@@ -1,0 +1,16 @@
+//simple console calculator
+fun main () {
+ 
+      println("Welcome to Calculator")
+      println("Please enter two numbers")
+      val a  = readLine()!!.toInt()
+      val b  = readLine()!!.toInt()
+      println("Please choose the operation you want to perform:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division")
+    when(readLine()!!.toInt()){
+          1 -> println("$a + $b = ${a+b}")
+          2 -> println("$a - $b = ${a-b}")
+          3 -> println("$a * $b = ${a*b}")
+          4 -> println("$a / $b = ${a/b}")
+          else -> println("Invalid Operation")
+      }
+  }
